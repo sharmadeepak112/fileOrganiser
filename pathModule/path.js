@@ -16,11 +16,16 @@ console.log(currentPath);
 let joinedPath=path.join(currentPath,'abc','def.txt');
 console.log(joinedPath);
 
-let file=path.basename('C:/Users/Dell/Desktop/JavaScript/fileOrganizer/pathModule/path.js');
-console.log(file);
 
-let file1=path.basename('C:/Users/Dell/Desktop/JavaScript/fileOrganizer/pathModule/path.js','.js');
-console.log(file1);
+let file1=fileName.split('/');
+file1.pop();
+console.log(file1.join("/"));
+
+let file2=path.basename('C:/Users/Dell/Desktop/JavaScript/fileOrganizer/pathModule/path.js');
+console.log(file2);
+
+let file3=path.basename('C:/Users/Dell/Desktop/JavaScript/fileOrganizer/pathModule/path.js','.js');
+console.log(file3);
 
 let extName=path.extname('C:/Users/Dell/Desktop/JavaScript/fileOrganizer/pathModule/path.js');
 console.log(extName);
