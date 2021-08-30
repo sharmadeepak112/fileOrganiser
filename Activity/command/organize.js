@@ -23,6 +23,10 @@ function organizeFn(srcPath){
         fs.mkdirSync(organizeFolderPath);
     }
 
+   findFile(srcPath,organizeFolderPath);
+}
+
+function findFile(srcPath,organizeFolderPath){
     let entities=fs.readdirSync(srcPath);
     // console.log(entities);
 
@@ -43,6 +47,8 @@ function organizeFn(srcPath){
           let dest=path.join(typeFolder,entities[i]);
           fs.copyFileSync(src,dest);
 
+        }else{
+            findFile(filePath,organizeFolderPath); 
         }
     }
 }
